@@ -1,6 +1,6 @@
 '''
 toys.py
-Simple toy functions to get comfortable working 
+Simple toy functions to get comfortable working
 with functions.
 '''
 
@@ -25,16 +25,16 @@ def sum(a, b):
 
 
 # write a function that takes two
-# numbers, adds them together using 
+# numbers, adds them together using
 # sum() and then increments the sum
 # using inc_return
 def sum_inc(a, b):
-    banana = sum(a,b)
-    return(banana + 1)
+    banana = sum(a, b)
+    return banana + 1
 
 
-# write a function that returns a 
-# boolean (True or False) for whether 
+# write a function that returns a
+# boolean (True or False) for whether
 # the input number is even
 def is_even(a):
     if (a % 2) == 0:
@@ -44,12 +44,12 @@ def is_even(a):
 
 
 # create for loop that takes a string
-# and an integer and returns a new string 
-# that is the string repeated equal to 
+# and an integer and returns a new string
+# that is the string repeated equal to
 # integer
 # e.g. string_repeat('ho', 3) returns
 # 'hohoho'
 def string_repeat(phrase, repeat):
-    # hint: you can add strings together 
+    # hint: you can add strings together
     # in order to concatenate them
-    return (phrase * int(repeat))
+    return phrase * int(repeat)
