@@ -10,7 +10,7 @@ Simple functions performing operations on basic Python data structures.
 # of "the_list". 
 def first_and_last(the_list):
 
-    return [0,-1]
+    return [the_list[0], the_list[-1]]
 
 
 # write a function that returns part of "the_list" between indices given by the
@@ -19,14 +19,16 @@ def first_and_last(the_list):
 # If "end" is greater then "beginning" or any og the indices is out of the
 # list, raise a "ValueError" exception. 
 def part_reverse(the_list, beginning, end):
-    return # hint this is incomplete
+
+    return the_list[beginning:end] # hint this is incomplete
 
 
 # write a function that at the "index" of "the_list" inserts three times the
 # same value. For example if the_list = [0,1,2,3,4] and index = 3 the function
 # will return [0,1,2,3,3,3,4]. 
 def repeat_at_index(the_list, index):
-    return
+
+    return the_list
 
 
 # Strings
@@ -34,7 +36,10 @@ def repeat_at_index(the_list, index):
 # write a function that checks whether the word is a palindrome, i.e. it reads
 # the same forward and backwards
 def palindrome_word(word):
-    return
+    if word == word.reverse():
+        return True
+    else:
+        return False
 
 # write a function that checks whether the sentence is a palindrome, i.e. it
 # read the same forward and backward. Ignore all spaces and other characters
