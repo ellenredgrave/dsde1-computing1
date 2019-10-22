@@ -30,7 +30,7 @@ def sum(a, b):
 # using inc_return
 def sum_inc(a, b):
     banana = sum(a,b)
-    inc_return(banana + 1)
+    return(banana + 1)
 
 
 # write a function that returns a 
