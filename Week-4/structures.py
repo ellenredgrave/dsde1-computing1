@@ -61,7 +61,8 @@ def palindrome_sentence(sentence):
 # the end.  The concatenated sentence must have no white space at the beginning
 # or at the end and the must be exactly one space after the end of the first
 # sentence. 
-def concatenate_sentences(sentenece1, sentence2):
+def concatenate_sentences(sentence1, sentence2):
+
     return
 
 
@@ -70,7 +71,10 @@ def concatenate_sentences(sentenece1, sentence2):
 # write a function that checks whether there is a record with given key in the
 # dictionary. Return True or False.
 def index_exists(dictionary, key):
-    return
+    if 'key' in dictionary:
+        return True
+    else:
+        return False
 
 # write a function which checks whether given value is stored in the
 # dictionary. Return True or False.
@@ -83,6 +87,5 @@ def merge_dictionaries(dictionary1, dictionary2):
     return
 
 if __name__ == '__main__':
-    part_reverse([1,2,3,4,5,6,7],2,6)
     
 
