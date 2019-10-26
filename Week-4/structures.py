@@ -16,19 +16,23 @@ def first_and_last(the_list):
 # write a function that returns part of "the_list" between indices given by the
 # second and third parameter, respectively. The returned part should be in
 # reverse order than in the original "the_list". 
-# If "end" is greater then "beginning" or any og the indices is out of the
+# If "end" is greater then "beginning" or any of the indices is out of the
 # list, raise a "ValueError" exception. 
 def part_reverse(the_list, beginning, end):
-
-    return the_list[beginning:end] # hint this is incomplete
+    if end<beginning:
+        raise ValueError('End larger than beginning!')
+    return the_list[beginning:end][::-1] # hint this is incomplete
 
 
 # write a function that at the "index" of "the_list" inserts three times the
 # same value. For example if the_list = [0,1,2,3,4] and index = 3 the function
 # will return [0,1,2,3,3,3,4]. 
 def repeat_at_index(the_list, index):
-
-    return the_list
+    first = the_list[0:index]
+    mid = [index]*3
+    second = the_list[index + 1:]
+    final = first + mid + second
+    return final
 
 
 # Strings
@@ -36,17 +40,19 @@ def repeat_at_index(the_list, index):
 # write a function that checks whether the word is a palindrome, i.e. it reads
 # the same forward and backwards
 def palindrome_word(word):
-    if word == word.reverse():
-        return True
-    else:
-        return False
+    return word.lower() == word.lower()[::-1]
 
 # write a function that checks whether the sentence is a palindrome, i.e. it
 # read the same forward and backward. Ignore all spaces and other characters
 # like fullstops, commas, etc. Also do not consider whether the letter is
 # capital or not. 
 def palindrome_sentence(sentence):
-    return
+    the_list = []
+    for char in sentence:
+        if char.isalpha():
+            the_list.append(char.lower())
+    
+    return the_list == the_list[::-1]
 
 # write a function that concatenates two sentences. First the function checks
 # whether the sentence meets the following criteria: it starts with a capital
@@ -75,3 +81,8 @@ def value_exists(dictionary, value):
 # from dictionary1 and dictionary2.
 def merge_dictionaries(dictionary1, dictionary2):
     return
+
+if __name__ == '__main__':
+    part_reverse([1,2,3,4,5,6,7],2,6)
+    
+

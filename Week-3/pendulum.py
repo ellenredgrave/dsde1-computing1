@@ -1,8 +1,9 @@
 import math
 
 def period(length, accel):
-    try
+    try:
         time = 2 * math.pi * (math.sqrt(length/accel))
-        except
+    except:
+        pass
 
     return time
