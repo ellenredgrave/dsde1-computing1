@@ -30,8 +30,14 @@ def welcome_message(name=None, place=None):
 # with lists)
 # the first argument is a list of numbers
 # the second optional keyword arguemt is called avg_type
+
 # if nothing for avg_type provided, return the mean of the list
 # if avg_type='mode', return the mode of the list 
 # (return list of all modes if there is a tie between multiple values)
 # if avg_type='mean', return the mean of the list
 # if avg_type='median', return the median of this list
+def list_average(num_list, avg_type = mean):
+    if avg_type = 'mode':
+    if avg_type = 'median':
+    else:
+        return
